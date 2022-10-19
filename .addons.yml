@@ -1,7 +1,3 @@
 ---
 channel: beta
-addons:
-  owserver:
-    repository: lrybak/owserver
-    target: owserver
-    image: ghcr.io/lrybak/owserver/{arch}
+addons:                                                                                                                                                                  owserver:                                                                                                                                                                repository: lrybak/addon-owserver                                                                                                                                      target: owserver                                                                                                                                                       image: ghcr.io/lrybak/owserver/{arch}
