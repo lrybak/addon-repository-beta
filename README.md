@@ -1,3 +1,33 @@
+## addon-repository-beta
+
+### WARNING! THIS IS A BETA REPOSITORY
+
+This add-ons repository contains beta releases of add-ons.
+
+- They might stop working at any time.
+- They could have a negative impact on your system.
+
+This repository was created for:
+
+- Anybody willing to test.
+- Anybody interested in trying out upcoming add-ons or add-on features.
+
+If you are more interested in stable releases of my add-ons:
+
+<https://github.com/lrybak/addon-repository>
+
+## Installation
+
+Adding this add-ons repository to your Home Assistant instance is
+pretty straightforward. In the Home Assistant add-on store,
+a possibility to add a repository is provided.
+
+Use the following URL to add this repository:
+
+```txt
+https://github.com/lrybak/addon-repository-beta
+```
+
 ## Add-ons provided by this repository
 
 ### &#10003; [owserver (1-wire)][addon-owserver]
