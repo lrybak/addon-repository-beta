@@ -1,1 +1,1 @@
-d
+- Upgrade hassio-addons base image to 13.2.0

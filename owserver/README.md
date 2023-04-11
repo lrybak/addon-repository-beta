@@ -10,9 +10,8 @@
 
 Provides owserver to read 1-Wire devices over DS2480B-based bus master serial device..
 
-## This is BETA version!
-
-Warning 🔧🔧🔧
+## This is BETA version! 🔧🔧🔧
+**WARNING:** The software in the beta repository may not be stable and could potentially cause issues on your system. Beta software is typically a pre-release version of a product that is still undergoing testing and development. Although it has undergone some testing, it may not have undergone the same level of testing as a stable release. Use at your own risk and exercise caution when installing or updating packages from the beta repository.
 
 ## About
 
@@ -20,18 +19,31 @@ This addon provides you owserver instance to read 1-Wire devices over DS2480B-ba
 
 ## Installation and configuration
 
-Please check the **[full documentation page](https://github.com/lrybak/hassio-owserver/blob/master/DOCS.md)**.
+### Installation
+
+1. Access your Home Assistant, go to **Add-ons** -> **Add-on Store** and add this URL as an additional repository: 
+`https://github.com/lrybak/addon-repository-beta`
+1. Find the "owserver (1-Wire)" add-on and click the "INSTALL" button.
+1. Configure the add-on and click on "START". With default configuration addon starts with fake (mocked) devices.
+1. Add to Home Assistant through the Integrations. Go to Integrations, Add Integration, Choose 1-Wire, Connection type: OWServer, Host: 9e0ef242-owserver, Port 4304 (default).
+1. That's it. On the integrations page wou will find 1-Wire integration with discovered devices.
+
+### Configuration
+Please check the **[full documentation page](https://github.com/lrybak/addon-owserver/blob/master/owserver/DOCS.md)**.
 
 ## Screenshots
 
-![Integration setup 1](images/screenshot_setup1.jpg)
-![Integration setup 2](images/screenshot_setup2.jpg)
-![Integration setup 3](images/screenshot_setup3.jpg)
-![Integrations page](images/screenshot_integrations.jpg)
-![owhttpd](images/screenshot_owhttpd.jpg)
+![Integration setup 1](https://github.com/lrybak/addon-owserver/raw/master/images/screenshot_setup1.jpg)
+![Integration setup 2](https://github.com/lrybak/addon-owserver/raw/master/images/screenshot_setup2.jpg)
+![Integration setup 3](https://github.com/lrybak/addon-owserver/raw/master/images/screenshot_setup3.jpg)
+![Integrations page](https://github.com/lrybak/addon-owserver/raw/master/images/screenshot_integrations.jpg)
+![owhttpd](https://github.com/lrybak/addon-owserver/raw/master/images/screenshot_owhttpd.jpg)
 
-[version]: https://img.shields.io/badge/version-v0.2.8-blue.svg
+[version]: https://img.shields.io/badge/version-v0.3.0-rc2-blue.svg
 [releases]: https://github.com/lrybak/hassio-owserver/releases
+[addons-repository]: https://github.com/lrybak/addon-repository
+[addons-repository-beta]: https://github.com/lrybak/addon-repository-beta
+[addons-repository-edge]: https://github.com/lrybak/addon-repository-edge
 
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
