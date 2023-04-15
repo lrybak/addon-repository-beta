@@ -1,3 +1,5 @@
-- Upgrade hassio-addons base image to 13.2.0
+### What has been changed
+
+- Update hassio-addons/addon-base to v13.2.1
 - Update docs
 - Code refactor
