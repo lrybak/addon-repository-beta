@@ -17,6 +17,6 @@ After changing add-on repository in Home Assistant, the hostname of add-on will 
 
 Apart of the above this change brings below changes as well:
 
-- ⬆️ Update hassio-addons/addon-base to v13.2.1
+- ⬆️ Update hassio-addons/addon-base to v13.2.2
 - 📜 Update docs
 - 🛠️ Code refactor
