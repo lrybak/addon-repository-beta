@@ -4,7 +4,7 @@ This change aims to update the add-on installation process. Currently, users hav
 
 With this pull request, three new repositories are introduced:
 
-- https://github.com/lrybak/addon-repository - containing stable releases of the addon, which is recommended for most users.
+- https://github.com/lrybak/addon-repository - containing stable releases of the add-on, which is recommended for most users.
 - https://github.com/lrybak/addon-repository-beta - containing release candidate versions of the add-on, which is recommended only for those who want to test new features.
 - https://github.com/lrybak/addon-repository-edge - containing bleeding edge builds of the add-on, suitable only for development purposes and may be unstable or not work at all.
 
