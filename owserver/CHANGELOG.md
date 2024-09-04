@@ -1,5 +1,5 @@
-### What has been changed
+## Changes
+- 🆕 Added support for special "w1" device. by @s-anderss in https://github.com/lrybak/hassio-owserver/pull/23
 
-- Update hassio-addons/addon-base to v13.2.1
-- Update docs
-- Code refactor
+## New Contributors
+- @s-anderss made their first contribution in https://github.com/lrybak/hassio-owserver/pull/23
