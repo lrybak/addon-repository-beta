@@ -39,7 +39,7 @@ https://github.com/lrybak/addon-repository-beta
 ![Supports amd64 Architecture][owserver-amd64-shield]
 ![Supports i386 Architecture][owserver-i386-shield]
 
-onewire server to read 1-Wire devices
+onewire server to read 1-Wire devices+
 
 [:books: owserver (1-wire) add-on documentation][addon-doc-owserver]
 
