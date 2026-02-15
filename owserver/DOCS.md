@@ -30,6 +30,37 @@ debug: false
 **Note**, these are just example configurations, don't copy, please create your own.
 
 
+### Option: `devices`
+
+This option allows you to specify list of 1-Wire devices.
+
+#### Sub-option: `device_type`
+
+Specify the owserver device type from the following options:
+- serial
+- passive (passive serial device)
+- i2c
+- usb
+- pbm (ElabNET's Professioinal Bumster PBM-01)
+- ha7net
+- w1 (direct access via GPIO on RasPi)
+- fake (random simulated device)
+
+#### Sub-option: `device`
+
+Specify the device.
+This is mandatory option only for following **device_type**:
+- serial
+- passive
+- i2c
+- pbm
+
+#### Sub-option: `ha7net_server`
+
+Specify the address of the ha7net device.
+This is mandatory option only for following **device_type**:
+- ha7net
+
 ### Option: `owhttpd`
 
 Enable to start the embedded owhttpd server _(Default true)_.
