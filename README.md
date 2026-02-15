@@ -12,14 +12,14 @@ This repository was created for:
 - Anybody willing to test.
 - Anybody interested in trying out upcoming apps or apps features.
 
-If you are more interested in stable releases of my add-ons:
+If you are more interested in stable releases of my apps:
 
 <https://github.com/lrybak/addon-repository>
 
 ## Installation
 
 Adding this apps repository to your Home Assistant instance is
-pretty straightforward. In the Home Assistant app store,
+pretty straightforward. In the Home Assistant apps store,
 a possibility to add a repository is provided.
 
 Use the following URL to add this repository:
@@ -28,13 +28,13 @@ Use the following URL to add this repository:
 https://github.com/lrybak/addon-repository-beta
 ```
 
-## Add-ons provided by this repository
+## Apps provided by this repository
 
 ### &#10003; [owserver (1-wire)][addon-owserver]
 
 ![Latest Version][owserver-version-shield]
-![Supports armhf Architecture][owserver-armhf-shield]
-![Supports armv7 Architecture][owserver-armv7-shield]
+![Supports aarch64 Architecture][owserver-aarch64-shield]
+![Supports amd64 Architecture][owserver-amd64-shield]
 
 onewire server to read 1-Wire devices+
 
