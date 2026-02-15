@@ -6,20 +6,68 @@ on:
   repository_dispatch:
     types: ["update"]
 
+permissions:
+  contents: write
+
 jobs:
   publish:
-    name: Publish add-on update
+    name: Publish app update
     runs-on: ubuntu-latest
     steps:
       - name: 🔂 Wait for other runs to complete
-        uses: softprops/turnstyle@v1
+        uses: softprops/turnstyle@v3
         with:
           continue-after-seconds: 1200
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 🚀 Run Repository Updater
-        uses: hassio-addons/repository-updater@v1.3.0
+        uses: hassio-addons/repository-updater@v2.0.1
         with:
           addon: ${{ github.event.client_payload.addon }}
           repository: ${{ github.repository }}
           token: ${{ secrets.UPDATER_TOKEN }}
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: ✏️ Apply channel suffix and push
+        env:
+          CHANNEL: BETA
+          TARGET_FILE: "config.yaml"
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          echo "🔄 Pulling latest changes made by repository-updater..."
+          git pull origin main --rebase
+
+          cat owserver/config.yaml
+          CONFIG_FILES=$(find . -maxdepth 2 -name "$TARGET_FILE")
+          if [ -z "$CONFIG_FILES" ]; then
+            echo "⚠️ No $TARGET_FILE files found. Exiting."
+            exit 1
+          fi
+          MODIFIED=false
+          for FILE in $CONFIG_FILES; do
+            echo "📂 Processing: $FILE"
+            CURRENT_NAME=$(yq '.name' "$FILE")
+
+            # Check if the name already contains the channel suffix (case-insensitive)
+            if [[ "$CURRENT_NAME" != *"$CHANNEL" ]]; then
+              echo "💉 Adding $CHANNEL suffix to $FILE"
+              yq -i ".name += \" $CHANNEL\"" "$FILE"
+              MODIFIED=true
+            else
+              echo "✅ Skipping $FILE - already has $CHANNEL suffix"
+            fi
+          done
+
+          if [ "$MODIFIED" = true ]; then
+            git add .
+            git commit -m "⬆️ Chore: apply channel suffix to app [skip ci]"
+            git pull --rebase origin main
+            git push
+            echo "✅ Changes pushed successfully."
+          else
+            echo "🤷 No changes needed."
+          fi
