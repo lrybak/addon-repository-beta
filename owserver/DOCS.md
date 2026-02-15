@@ -35,36 +35,17 @@ debug: false
 Enable to start the embedded owhttpd server _(Default true)_.
 owhttpd server is exposed via **Ingress (Open Web UI)**
 
-### Option: `device`
-
-Specify owserver device, if using the "serial_or_i2c" type.
-
-### Option: `device_type`
-
-Specify owserver device_type from the options below:
-- serial_or_i2c device
-- usb device
-- ha7net device
-- w1 device (direct access via GPIO on RasPi)
-- fake device (random simulated device)
-
-Specify "/dev/null" as device, if using usb/ha7net/w1/fake type.
-
 ### Option: `temperature_scale`
 
 Specify temperature scale used by owserver from the options below:
 - Celsius _default_
-- Fahrenheit 
-- Kelvin 
-- Rankine 
-
-### Option: `ha7net_server`
-
-Specify ha7net server. Use it with ha7net device only.
+- Fahrenheit
+- Kelvin
+- Rankine
 
 ### Option: `debug`
 
-Specify debug mode for owserver.
+Specify debug mode for owserver. _Please note that once DEBUG mode is enabled you will not be able to connect to the owserver. Use debug mode only to troubleshoot issues with 1-Wire connectivity_
 
 
 ## Home Assistant integration

@@ -1,5 +1,5 @@
 ## Changes
-- 🆕 Added support for special "w1" device. by @s-anderss in https://github.com/lrybak/hassio-owserver/pull/23
-
-## New Contributors
-- @s-anderss made their first contribution in https://github.com/lrybak/hassio-owserver/pull/23
+- ⬆️ Update hassio-addons/addon-base to v18.1.1
+- 🛠️ Change the way of checking the owhttpd config parameter (fixes #42)
+- 🛠️ Fix for issue #20: multiple DS2482's on a single I2C channel (fixes #20)
+- 📓 Updated documentation
