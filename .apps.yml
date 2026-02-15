@@ -1,6 +1,6 @@
 ---
 channel: beta
-addons:
+apps:
   owserver:
     repository: lrybak/hassio-owserver
     target: .

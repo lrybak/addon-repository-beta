@@ -1,20 +1,34 @@
 # owserver
 
-The addon provides owserver to read 1-Wire devices over serial/i2c or usb device.
+The app provides owserver enabling access to 1-Wire sensors over serial, i2c, usb, w1, pbm, ha7net fake devices.
 
 ## Configuration
 
-**Note**: _Remember to restart the add-on whenever configuration change._
+**Note**: _Remember to restart the app whenever configuration change._
 
-Example add-on configuration (YAML mode):
+Example app configurations:
 
 ```yaml
+devices:
+  - device_type: serial
+    device: /dev/ttyUSB0
 owhttpd: true
 temperature_scale: Celsius
-device_type: serial_or_i2c
-device: /dev/serial/by-id/usb-MERA-PROJEKT_USB__-__1Wire__MP00202__MPVVSOBE-if00-port0
 debug: false
 ```
+
+```yaml
+devices:
+  - device_type: ha7net
+    ha7net_server: 192.168.50.1
+  - device_type: ha7net
+    ha7net_server: 192.168.50.2
+owhttpd: true
+temperature_scale: Celsius
+debug: false
+```
+**Note**, these are just example configurations, don't copy, please create your own.
+
 
 ### Option: `owhttpd`
 
@@ -55,8 +69,9 @@ Specify debug mode for owserver.
 
 ## Home Assistant integration
 
-1. Configure and start addon. With default configuration addon starts with fake (mocked) devices.
+1. Configure and start app. With default configuration app starts with fake (mocked) devices.
 1. Add to Home Assistant through the Integrations. Go to Integrations, Add Integration, Choose 1-Wire
-    - Host: `provide add-on's hostname (from add-on details page)`
+    - Host: `provide app's hostname (from app details page)`
     - Port: `4304` _(default)_
-1. That's it. On the integrations page wou will find 1-Wire integration with discovered devices.
+1. ... or use Home Asistant auto discovery (since 2025.2.0). Go to Integrations, find discovered app and Add it.
+1. That's it. On the integrations page wou will find 1-Wire integration with 1-Wire devices.
