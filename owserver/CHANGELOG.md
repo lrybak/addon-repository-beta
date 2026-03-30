@@ -1,9 +1,11 @@
 ## What's Changed
 
-## 🚀 New Features
-
 - New devices support (#54) @lrybak @dc-eds @krumboeck
 - owhttpd theme (#51) @lrybak
+
+## 🚀 New Features
+
+- New devices support (#54) @lrybak
 
 ## 📦 Dependency Updates
 
@@ -11,6 +13,7 @@
 
 ## 🛠️ Maintenance & CI
 
+- ci: bump actions/setup-python from 5 to 6 (#68) @[dependabot[bot]](https://github.com/apps/dependabot)
 - release drafer: add commitish (#64) @lrybak
 - ci: bump release-drafter/release-drafter from 6 to 7 (#60) @[dependabot[bot]](https://github.com/apps/dependabot)
 - ci: bump docker/setup-buildx-action from 3 to 4 (#62) @[dependabot[bot]](https://github.com/apps/dependabot)
@@ -21,10 +24,6 @@
 - ci: bump hadolint/hadolint-action from 3.1.0 to 3.3.0 (#56) @[dependabot[bot]](https://github.com/apps/dependabot)
 - New devices support (#54) @lrybak
 - CI improvements (#55) @lrybak
-- add tests automation (#66) @lrybak
-- arm64 runner (#52) @lrybak
-- CI Integration test (#50) @lrybak
-
 
 ## 📖 Documentation
 
